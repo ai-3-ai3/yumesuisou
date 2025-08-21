@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+.site-header {
+	background-image:url("../images/top.jpg");
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	
+	height: calc(100vh - 50px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.site-header .site-title{
+	font-size: 60px; /* さらに大きくして存在感UP */
+  font-family: "Hiragino Mincho ProN", serif;
+  color: #000;
+  text-shadow:
+    -2px -2px 0 #d4af37,
+     2px -2px 0 #d4af37,
+    -2px  2px 0 #d4af37,
+     2px  2px 0 #d4af37;
+  writing-mode: vertical-rl;
+  letter-spacing: 5px; /* 少し文字に余白を出す */
+}
+.site-header .catch{
+	display: none;
+	}
+.site-nav{
+	background-color: #000000;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+.site-nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+.site-nav li{
+	margin: 0 15px;
+}
+.site-nav a {
+	display: block;
+	padding: 15px 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+	}
+
+.site-nav a:hover{
+	color: #b30000;
+}
+.menu-toggle {
+	display:none;
+}
+
+@media screen and (max-width: 768px){
+	.site-header {
+		background-image: url("../images/top01_sp.jpg");
+		background-color: darkred;
+		background-size: cover;
+		background-position: center top;
+		position: relative;
+		height: 100vh;
+}
+	
+	.site-header .site-title {
+		color: #000;
+		text-shadow: none;
+		font-size: 23px;
+		writing-mode: horizontal-tb;
+		position: absolute;
+		top: 0.5px;
+		left: 20px;
+		line-height: :1;
+		
+	}	
+	.menu-toggle {
+		display:block;
+		font-size: 24px;
+		background:  none;
+		border: none;
+		color: #000;
+		  
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 1000;
+	}
+	.site-nav ul {
+			display: none;
+			flex-direction: column;
+			background-color: #9f1522;
+			position:absolute;
+			top: 60px;
+			left: 0;
+			width: 100%;
+		}
+	.site-nav a {
+		color: #000;
+	}
+	
+		.site-nav.active ul {
+			display: flex;
+		}
+	.site-nav a:hover {
+		background-color: #FFF5CC;
+		color: #000;
+	}
+	
+}

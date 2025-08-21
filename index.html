@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>夢酔荘｜古民家旅館</title>
+<link rel="stylesheet" href="css/style.css">	
+</head>
+
+<body>
+	<div class="main-visual">
+		 <header class="site-header">
+			 <h1 class="site-title">古民家旅館 夢酔荘</h1>
+			 <p class="catch">夢のようなひとときをお過ごしください</p>
+		 </header>
+		
+		<button class="menu-toggle" aria-label="メニューを開く">☰</button>
+		
+		<nav class="site-nav">
+			<ul>
+				<li><a href="#">ご挨拶</a></li>
+				<li><a href="#">プラン</a></li>
+				<li><a href="#">地図</a></li>
+				<li><a href="#">予約</a></li>
+			</ul>
+		</nav>
+	</div>
+	<script>
+	const toggle =
+		  document.querySelector('.menu-toggle');
+	const nav=
+	      document.querySelector('.site-nav');
+		
+		toggle.addEventListener('click', () => {
+			nav.classList.toggle('active');
+		});
+	</script>
+	
+	
+</body>
+</html>
